@@ -358,7 +358,7 @@ EOF
    sed -i "s/;opcache.enable.*/opcache.enable = 1/" $PhpIni
    sed -i "s/;opcache.memory_consumption.*/opcache.memory_consumption = 256/" $PhpIni
    sed -i "s/;opcache.max_accelerated_files.*/opcache.max_accelerated_files = 10000/" $PhpIni
-   
+   sed -i "s/;opcache.revalidate_freq.*/opcache.revalidate_freq = 360/" $PhpIni
     
    # Remove the default site. Moodle is the only site we want
    rm -f /etc/nginx/sites-enabled/default
